@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+<!-- This configuration file was written by the eclipse-cs plugin configuration editor 
+  -->
+<!-- 
+	Checkstyle-Configuration: VA CheckStyle 
+	Description: none 
+-->
+<module name="Checker">
+	<property name="severity" value="warning" />
+	<module name="TreeWalker">
+		<module name="JavadocMethod">
+			<property name="logLoadErrors" value="true" />
+			<property name="suppressLoadErrors" value="true" />
+		</module>
+		<module name="JavadocType">
+			<property name="scope" value="package" />
+		</module>
+		<module name="JavadocVariable">
+			<property name="scope" value="package" />
+		</module>
+		<module name="JavadocStyle">
+			<property name="scope" value="package" />
+			<property name="checkEmptyJavadoc" value="true" />
+		</module>
+		<module name="ConstantName" />
+		<module name="MemberName" />
+		<module name="MethodName" />
+		<module name="PackageName">
+			<property name="severity" value="error" />
+			<property name="format" value="^[a-z]+(\.[a-z_][a-z0-9_]*)*$" />
+		</module>
+		<module name="ParameterName" />
+		<module name="StaticVariableName">
+			<property name="applyToPrivate" value="false" />
+		</module>
+		<module name="TypeName">
+			<property name="severity" value="error" />
+		</module>
+		<module name="AvoidStarImport" />
+		<module name="IllegalImport">
+			<property name="severity" value="error" />
+		</module>
+		<module name="UnusedImports" />
+		<module name="LineLength">
+			<property name="severity" value="error" />
+			<property name="max" value="128" />
+		</module>
+		<module name="MethodLength">
+			<property name="severity" value="error" />
+		</module>
+		<module name="ParameterNumber" />
+		<module name="OperatorWrap" />
+		<module name="AvoidNestedBlocks" />
+		<module name="EmptyBlock" />
+		<module name="EmptyStatement" />
+		<module name="EqualsHashCode" />
+		<module name="HiddenField">
+			<property name="ignoreConstructorParameter" value="true" />
+			<property name="ignoreSetter" value="true" />
+			<property name="ignoreAbstractMethods" value="true" />
+			<message key="hidden.field" value="''{0}'' hides a field. ''{0}'' does not have a modifier or is not marked private , but has public setter / getter methods. " />
+		</module>
+		<module name="InnerAssignment" />
+		<module name="MagicNumber" />
+		<module name="MissingSwitchDefault" />
+		<module name="RedundantThrows">
+			<property name="logLoadErrors" value="true" />
+			<property name="suppressLoadErrors" value="true" />
+		</module>
+		<module name="SimplifyBooleanExpression" />
+		<module name="SimplifyBooleanReturn" />
+		<module name="DesignForExtension" />
+		<module name="FinalClass">
+			<property name="severity" value="error" />
+		</module>
+		<module name="HideUtilityClassConstructor">
+			<property name="severity" value="error" />
+		</module>
+		<module name="VisibilityModifier" />
+		<module name="TodoComment">
+			<property name="severity" value="error" />
+		</module>
+		<module name="AnonInnerLength">
+			<property name="max" value="40" />
+		</module>
+		<module name="ExecutableStatementCount">
+			<property name="severity" value="ignore" />
+			<property name="tokens"
+				value="INSTANCE_INIT,STATIC_INIT,METHOD_DEF,CTOR_DEF" />
+		</module>
+		<module name="TodoComment">
+			<property name="severity" value="error" />
+			<property name="format" value="FIXME:" />
+			<metadata name="net.sf.eclipsecs.core.comment" value="Fix Me indicator" />
+			<metadata name="com.atlassw.tools.eclipse.checkstyle.comment"
+				value="Fixme comments" />
+			<message key="todo.match" value="Comment matches fix-me format ''{0}''." />
+		</module>
+		<module name="BooleanExpressionComplexity">
+			<property name="max" value="5" />
+		</module>
+		<module name="ClassFanOutComplexity" />
+		<module name="CyclomaticComplexity" />
+		<module name="ModifierOrder" />
+	</module>
+	<module name="FileTabCharacter">
+		<property name="severity" value="error" />
+	</module>
+	<module name="FileLength">
+		<property name="severity" value="error" />
+	</module>
+	<module name="NewlineAtEndOfFile" >
+	   <property name="lineSeparator" value="lf"/>
+	</module>
+	<module name="StrictDuplicateCode" />
+</module>

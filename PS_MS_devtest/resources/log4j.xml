@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+
+	<appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{hh:mm:ss a} %-5p [%t] [%c:%M] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="PepsAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs/peps.log" />
+		<param name="Append" value="false" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd MMM yyyy hh:mm:ss a} %-5p [%c:%M] %m%n" />
+		</layout>
+	</appender>
+	<appender name="SpringAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="logs/spring.log" />
+		<param name="Append" value="false" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd MMM yyyy hh:mm:ss a} %-5p [%c:%M] %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="org.springframework" additivity="false">
+		<level value="error" />
+		<appender-ref ref="ConsoleAppender" />
+		<appender-ref ref="SpringAppender" />
+	</logger>
+
+	<logger name="org.aspectj" additivity="false">
+		<level value="error" />
+		<appender-ref ref="ConsoleAppender" />
+	</logger>
+
+	<logger name="org.apache.mina" additivity="false">
+		<level value="error" />
+		<appender-ref ref="ConsoleAppender" />
+	</logger>
+
+	<logger name="org.apache.ftpserver" additivity="false">
+		<level value="info" />
+		<appender-ref ref="ConsoleAppender" />
+	</logger>
+
+	<logger name="gov.va.med.pharmacy.peps" additivity="false">
+		<level value="error" />
+		<appender-ref ref="PepsAppender" />
+		<appender-ref ref="ConsoleAppender" />
+	</logger>
+
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="ConsoleAppender" />
+	</root>
+
+</log4j:configuration>
+
+

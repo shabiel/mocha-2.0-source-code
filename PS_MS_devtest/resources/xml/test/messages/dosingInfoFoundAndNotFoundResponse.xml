@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dosingInfoResponse
+    xsi:schemaLocation="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/dosing/info/response dosingInfoSchemaOutput.xsd"
+    xmlns="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/dosing/info/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dosingNotFound>
+        <notFound
+            notFoundReason="ID not found : &quot;1999999999&quot;."
+            fdbdx="999" gcnSeqNo="1999999999"/>
+        <notFound notFoundReason="ID not found : &quot;999999999&quot;."
+            fdbdx="999" gcnSeqNo="999999999"/>
+    </dosingNotFound>
+    <dosingInfo fdbdx="999" gcnSeqNo="22211">
+        <dispensableDrugName>phenylephrine-guaifenesin</dispensableDrugName>
+        <dispensableDrugDescription>phenylephrine-guaifenesin ER 40 mg-600 mg tablet,ext.release,12 hr</dispensableDrugDescription>
+    </dosingInfo>
+    <dosingInfo fdbdx="999" gcnSeqNo="22211">
+        <dispensableDrugName>phenylephrine-guaifenesin</dispensableDrugName>
+        <dispensableDrugDescription>phenylephrine-guaifenesin ER 40 mg-600 mg tablet,ext.release,12 hr</dispensableDrugDescription>
+    </dosingInfo>
+</dosingInfoResponse>

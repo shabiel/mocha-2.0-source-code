@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<dosingInfoRequest
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/dosing/info/request dosingInfoSchemaInput.xsd"
+    xmlns="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/dosing/info/request">
+
+    <dosingInfo gcnSeqNo="8346" fdbdx="999" />
+</dosingInfoRequest>
+

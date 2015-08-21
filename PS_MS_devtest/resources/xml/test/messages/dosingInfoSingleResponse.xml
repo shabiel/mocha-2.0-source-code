@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dosingInfoResponse
+    xsi:schemaLocation="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/dosing/info/response dosingInfoSchemaOutput.xsd"
+    xmlns="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/dosing/info/response" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dosingInfo fdbdx="999" gcnSeqNo="8346">
+        <doseRanges>
+            <doseRange doseTypeId="02" doseRouteId="064"
+                ageLowInDays="4745" ageHighInDays="6569">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit>HOURS</halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>4.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>1.8</lowEliminationHalfLife>
+                <maxDuration>0</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>MAINTENANCE</doseTypeDescription>
+                <intlDoseTypeDescription>MAINTENANCE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.25</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>50.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>3200.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>16.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>12.5</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.0625</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per day</maxSingleDoseFormUnit>
+                <durationHigh>0</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>6.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>800.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>4.0</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="02" doseRouteId="064"
+                ageLowInDays="30" ageHighInDays="179">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit></halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>0.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>0.0</lowEliminationHalfLife>
+                <maxDuration>0</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>MAINTENANCE</doseTypeDescription>
+                <intlDoseTypeDescription>MAINTENANCE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.2</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>40.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>40.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per kilogram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>0.2</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per kilogram per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>10.0</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.05</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per kilogram per day</maxSingleDoseFormUnit>
+                <durationHigh>0</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>4.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>10.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram per kilogram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>0.05</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each/kilogram</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="07" doseRouteId="064"
+                ageLowInDays="180" ageHighInDays="6569">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit>HOURS</halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>4.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>1.0</lowEliminationHalfLife>
+                <maxDuration>1</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>SINGLE DOSE</doseTypeDescription>
+                <intlDoseTypeDescription>SINGLE DOSE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.0625</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>12.5</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>800.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>4.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>12.5</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.0625</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per day</maxSingleDoseFormUnit>
+                <durationHigh>1</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>1.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>800.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>4.0</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="07" doseRouteId="064"
+                ageLowInDays="30" ageHighInDays="179">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit></halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>0.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>0.0</lowEliminationHalfLife>
+                <maxDuration>1</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>SINGLE DOSE</doseTypeDescription>
+                <intlDoseTypeDescription>SINGLE DOSE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.05</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>10.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>10.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per kilogram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>0.05</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per kilogram per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>10.0</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.05</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per kilogram per day</maxSingleDoseFormUnit>
+                <durationHigh>1</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>1.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>10.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram per kilogram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>0.05</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each/kilogram</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="07" doseRouteId="064"
+                ageLowInDays="6570" ageHighInDays="40150">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit>HOURS</halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>4.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>1.8</lowEliminationHalfLife>
+                <maxDuration>1</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>false</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>SINGLE DOSE</doseTypeDescription>
+                <intlDoseTypeDescription>SINGLE DOSE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>4.0</doseFormHigh>
+                <doseFormHighUnit>each per day</doseFormHighUnit>
+                <doseFormLow>1.0</doseFormLow>
+                <doseFormLowUnit>each per day</doseFormLowUnit>
+                <doseHigh>800.0</doseHigh>
+                <doseHighUnit>milligram per day</doseHighUnit>
+                <doseLow>200.0</doseLow>
+                <doseLowUnit>milligram per day</doseLowUnit>
+                <maxDailyDose>800.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>4.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>800.0</maxSingleDose>
+                <maxSingleDoseUnit>milligram</maxSingleDoseUnit>
+                <maxSingleDoseForm>4.0</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per day</maxSingleDoseFormUnit>
+                <durationHigh>1</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>1.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>800.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>4.0</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="02" doseRouteId="064"
+                ageLowInDays="180" ageHighInDays="4744">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit>HOURS</halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>4.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>1.0</lowEliminationHalfLife>
+                <maxDuration>0</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>MAINTENANCE</doseTypeDescription>
+                <intlDoseTypeDescription>MAINTENANCE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.25</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>50.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>2400.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>12.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>12.5</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.0625</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per day</maxSingleDoseFormUnit>
+                <durationHigh>0</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>4.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>800.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>4.0</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="02" doseRouteId="064"
+                ageLowInDays="6570" ageHighInDays="40150">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit>HOURS</halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>4.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>1.8</lowEliminationHalfLife>
+                <maxDuration>0</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>false</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>MAINTENANCE</doseTypeDescription>
+                <intlDoseTypeDescription>MAINTENANCE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>16.0</doseFormHigh>
+                <doseFormHighUnit>each per day</doseFormHighUnit>
+                <doseFormLow>1.0</doseFormLow>
+                <doseFormLowUnit>each per day</doseFormLowUnit>
+                <doseHigh>3200.0</doseHigh>
+                <doseHighUnit>milligram per day</doseHighUnit>
+                <doseLow>200.0</doseLow>
+                <doseLowUnit>milligram per day</doseLowUnit>
+                <maxDailyDose>3200.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>16.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>800.0</maxSingleDose>
+                <maxSingleDoseUnit>milligram</maxSingleDoseUnit>
+                <maxSingleDoseForm>4.0</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per day</maxSingleDoseFormUnit>
+                <durationHigh>0</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>6.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>800.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>4.0</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each</maxSingleNTEDoseFormUnit>
+            </doseRange>
+        </doseRanges>
+        <minMaxResults>
+            <minMax ageLowInDays="30" ageHighInDays="179">
+                <bsaRequired>false</bsaRequired>
+                <doseFormHigh>0.2</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>40.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>0.0</maxDailyDose>
+                <maxDailyDoseUnit></maxDailyDoseUnit>
+                <maxDailyDoseForm>0.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit></maxDailyDoseFormUnit>
+                <resultType>fdbMMTResult</resultType>
+                <warningCode>0</warningCode>
+                <weightRequired>true</weightRequired>
+            </minMax>
+            <minMax ageLowInDays="180" ageHighInDays="4744">
+                <bsaRequired>false</bsaRequired>
+                <doseFormHigh>0.25</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>50.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>2400.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>12.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <resultType>fdbMMTResult</resultType>
+                <warningCode>0</warningCode>
+                <weightRequired>true</weightRequired>
+            </minMax>
+            <minMax ageLowInDays="4745" ageHighInDays="6569">
+                <bsaRequired>false</bsaRequired>
+                <doseFormHigh>0.25</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>50.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>3200.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>16.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <resultType>fdbMMTResult</resultType>
+                <warningCode>0</warningCode>
+                <weightRequired>true</weightRequired>
+            </minMax>
+            <minMax ageLowInDays="6570" ageHighInDays="23725">
+                <bsaRequired>false</bsaRequired>
+                <doseFormHigh>16.0</doseFormHigh>
+                <doseFormHighUnit>each per day</doseFormHighUnit>
+                <doseFormLow>1.0</doseFormLow>
+                <doseFormLowUnit>each per day</doseFormLowUnit>
+                <doseHigh>3200.0</doseHigh>
+                <doseHighUnit>milligram per day</doseHighUnit>
+                <doseLow>200.0</doseLow>
+                <doseLowUnit>milligram per day</doseLowUnit>
+                <maxDailyDose>0.0</maxDailyDose>
+                <maxDailyDoseUnit></maxDailyDoseUnit>
+                <maxDailyDoseForm>0.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit></maxDailyDoseFormUnit>
+                <resultType>fdbMMTResult</resultType>
+                <warningCode>0</warningCode>
+                <weightRequired>false</weightRequired>
+            </minMax>
+            <minMax ageLowInDays="23726" ageHighInDays="40150">
+                <bsaRequired>false</bsaRequired>
+                <doseFormHigh>16.0</doseFormHigh>
+                <doseFormHighUnit>each per day</doseFormHighUnit>
+                <doseFormLow>1.0</doseFormLow>
+                <doseFormLowUnit>each per day</doseFormLowUnit>
+                <doseHigh>3200.0</doseHigh>
+                <doseHighUnit>milligram per day</doseHighUnit>
+                <doseLow>200.0</doseLow>
+                <doseLowUnit>milligram per day</doseLowUnit>
+                <maxDailyDose>0.0</maxDailyDose>
+                <maxDailyDoseUnit></maxDailyDoseUnit>
+                <maxDailyDoseForm>0.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit></maxDailyDoseFormUnit>
+                <resultType>fdbMMTResult</resultType>
+                <warningCode>0</warningCode>
+                <weightRequired>false</weightRequired>
+            </minMax>
+        </minMaxResults>
+        <neonatalDoseRanges>
+            <doseRange doseTypeId="02" doseRouteId="064"
+                ageLowInDays="30" ageHighInDays="179">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit></halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>0.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>0.0</lowEliminationHalfLife>
+                <maxDuration>0</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>MAINTENANCE</doseTypeDescription>
+                <intlDoseTypeDescription>MAINTENANCE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.2</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>40.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>40.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per kilogram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>0.2</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per kilogram per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>10.0</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.05</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per kilogram per day</maxSingleDoseFormUnit>
+                <durationHigh>0</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>4.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>10.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram per kilogram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>0.05</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each/kilogram</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="07" doseRouteId="064"
+                ageLowInDays="30" ageHighInDays="179">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit></halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>0.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>0.0</lowEliminationHalfLife>
+                <maxDuration>1</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>SINGLE DOSE</doseTypeDescription>
+                <intlDoseTypeDescription>SINGLE DOSE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.05</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>10.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>10.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per kilogram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>0.05</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per kilogram per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>10.0</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.05</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per kilogram per day</maxSingleDoseFormUnit>
+                <durationHigh>1</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>1.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>10.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram per kilogram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>0.05</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each/kilogram</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="02" doseRouteId="064"
+                ageLowInDays="180" ageHighInDays="364">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit>HOURS</halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>4.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>1.0</lowEliminationHalfLife>
+                <maxDuration>0</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>MAINTENANCE</doseTypeDescription>
+                <intlDoseTypeDescription>MAINTENANCE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.25</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>50.0</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>2400.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>12.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>12.5</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.0625</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per day</maxSingleDoseFormUnit>
+                <durationHigh>0</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>4.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>800.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>4.0</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each</maxSingleNTEDoseFormUnit>
+            </doseRange>
+            <doseRange doseTypeId="07" doseRouteId="064"
+                ageLowInDays="180" ageHighInDays="364">
+                <custom>false</custom>
+                <bsaRequired>false</bsaRequired>
+                <halfLifeUnit>HOURS</halfLifeUnit>
+                <category></category>
+                <hepaticImpairment>true</hepaticImpairment>
+                <highEliminationHalfLife>4.0</highEliminationHalfLife>
+                <lowEliminationHalfLife>1.0</lowEliminationHalfLife>
+                <maxDuration>1</maxDuration>
+                <renalImpairment>true</renalImpairment>
+                <weightRequired>true</weightRequired>
+                <doseRouteDescription>ORAL</doseRouteDescription>
+                <intlDoseRouteDescription>ORAL</intlDoseRouteDescription>
+                <doseTypeDescription>SINGLE DOSE</doseTypeDescription>
+                <intlDoseTypeDescription>SINGLE DOSE</intlDoseTypeDescription>
+                <crclThreshold>50</crclThreshold>
+                <crclThresholdUnit>milliliter per minute</crclThresholdUnit>
+                <doseFormHigh>0.0625</doseFormHigh>
+                <doseFormHighUnit>each per kilogram per day</doseFormHighUnit>
+                <doseFormLow>0.02</doseFormLow>
+                <doseFormLowUnit>each per kilogram per day</doseFormLowUnit>
+                <doseHigh>12.5</doseHigh>
+                <doseHighUnit>milligram per kilogram per day</doseHighUnit>
+                <doseLow>4.0</doseLow>
+                <doseLowUnit>milligram per kilogram per day</doseLowUnit>
+                <maxDailyDose>800.0</maxDailyDose>
+                <maxDailyDoseUnit>milligram per day</maxDailyDoseUnit>
+                <maxDailyDoseForm>4.0</maxDailyDoseForm>
+                <maxDailyDoseFormUnit>each per day</maxDailyDoseFormUnit>
+                <maxLifetimeDose>0.0</maxLifetimeDose>
+                <maxLifetimeDoseUnit></maxLifetimeDoseUnit>
+                <maxLifetimeDoseForm>0.0</maxLifetimeDoseForm>
+                <maxLifetimeDoseFormUnit></maxLifetimeDoseFormUnit>
+                <maxSingleDose>12.5</maxSingleDose>
+                <maxSingleDoseUnit>milligram per kilogram</maxSingleDoseUnit>
+                <maxSingleDoseForm>0.0625</maxSingleDoseForm>
+                <maxSingleDoseFormUnit>each per day</maxSingleDoseFormUnit>
+                <durationHigh>1</durationHigh>
+                <durationLow>1</durationLow>
+                <frequencyHigh>1.0</frequencyHigh>
+                <frequencyLow>1.0</frequencyLow>
+                <hitIndicationDescription>Default Screening Record</hitIndicationDescription>
+                <hitIndicationId>4892</hitIndicationId>
+                <indicationDescription>Default Screening Record</indicationDescription>
+                <indicationId>999</indicationId>
+                <indicationIdType>fdbMCTFDBDX</indicationIdType>
+                <maxSingleNTEDose>800.0</maxSingleNTEDose>
+                <maxSingleNTEDoseUnit>milligram</maxSingleNTEDoseUnit>
+                <maxSingleNTEDoseForm>4.0</maxSingleNTEDoseForm>
+                <maxSingleNTEDoseFormUnit>each</maxSingleNTEDoseFormUnit>
+            </doseRange>
+        </neonatalDoseRanges>
+        <dispensableDrugName>ibuprofen</dispensableDrugName>
+        <dispensableDrugDescription>ibuprofen 200 mg tablet</dispensableDrugDescription>
+    </dosingInfo>
+</dosingInfoResponse>

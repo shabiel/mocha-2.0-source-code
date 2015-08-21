@@ -1,0 +1,35 @@
+<project name="generate" default="generate" xmlns:mocha="http://www.domain/pharmacy/mocha">
+
+	<import file="../PS_MS_bld/build.properties.xml"/>
+
+	<target name="initGenDir" description="Initializes the directories needed during the generate.">
+		<mkdir dir="${gen.lib.dir}"/>
+		<mkdir dir="${gen.src.dir}"/>
+	</target>
+	
+	<macrodef name="initXmlTemplate" uri="http://www.domain/pharmacy/mocha">
+        <sequential>
+            <taskdef name="xjc"
+                     classname="com.sun.tools.xjc.XJCTask"
+                     classpathref="build.class.path"
+                     loaderref="ant-loader" />
+        </sequential>
+    </macrodef>
+
+    <macrodef name="xmlToJava" uri="http://www.domain/pharmacy/mocha">
+        <attribute name="schemaDir" default="${schema.dir}" />
+        <attribute name="srcGenDir" default="${gen.src.dir}" />
+        <sequential>
+            <xjc destdir="@{srcGenDir}" binding="${schema.dir}/globalBindings.xjb" extension="true">
+                <schema dir="@{schemaDir}">
+                    <include name="**/*.xsd" />
+                </schema>
+            </xjc>
+        </sequential>
+    </macrodef>
+
+    <target name="generate" depends="initGenDir" description="Generates object binding source code using JAXB from XML schema files.">
+    	<mocha:initXmlTemplate/>
+    	<mocha:xmlToJava/>
+    </target>
+</project>

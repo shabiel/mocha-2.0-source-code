@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxb/activation-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons/commons-collections-3.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons/commons-configuration-1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons/commons-lang-2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons/commons-net-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/drugdatavendor/fdb/DIF3.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/drugdatavendor/fdb/FDBDataConnection.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxb/jaxb-api-2.1.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxb/jaxb-impl-2.1.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="build/jaxb/jaxb-xjc-2.1.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxb/jsr173_1.0_api.jar"/>
+	<classpathentry exported="true" kind="lib" path="test/junit-4.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="runtime/log/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="runtime/database/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="build/servlet/servlet-api-2.5-6.1.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/spring/spring-2.5.6.SEC01.jar"/>
+	<classpathentry exported="true" kind="lib" path="build/weblogic/wlfullclient.jar"/>
+	<classpathentry exported="true" kind="lib" path="build/ant/slf4j-api-1.5.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="build/ant/slf4j-nop-1.5.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

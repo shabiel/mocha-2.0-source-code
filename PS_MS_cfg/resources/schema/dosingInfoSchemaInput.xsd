@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/dosing/info/request" 
+	targetNamespace="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/dosing/info/request" 
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+    <xsd:element name="dosingInfoRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element
+                    ref="dosingInfo"
+                    minOccurs="1"
+                    maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="dosingInfo">
+        <xsd:complexType>
+            <xsd:attribute
+                name="gcnSeqNo"
+                type="xsd:integer"
+                use="required" />
+            <xsd:attribute
+                name="fdbdx"
+                type="xsd:string"
+                use="required" />
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,286 @@
+<project name="MOCHA-Build" default="package" basedir="." xmlns:mocha="http://www.domain/pharmacy/mocha">
+
+	<defaultexcludes add="**/.copyarea.db" /> <!-- Do not include ClearCase files. -->
+	<import file="build.properties.xml"/>
+	<property file="${ps_ms_cfg.dir}/version/MOCHAVersion.properties"/>
+    <property environment="env"/>
+    	
+	<import file="${ps_ms_dev_utils.dir}/generate.xml"/>
+
+	<target name="clean" description="Deletes files/directories used during the build process.">
+		<delete dir="${gen.lib.dir}"/>
+		<delete dir="${dist.dir}"/>
+		<delete dir="${build.dir}"/>
+		<delete dir="${report.dir}"/>
+	</target>
+	
+    <target name="initVersion">
+        <!-- The following will not override the BUILD_NUMBER environment variable set by Build Forge.
+             So a build being performed that does not have the BUILD_NUMBER environment variable set 
+             will have the build number set to 'DEV' -->
+        <property name="env.BUILD_NUMBER" value="DEV"/>
+        <property name="version.build" value="${env.BUILD_NUMBER}"/>
+        <property name="version.number" value="${version.major}.${version.minor}.${version.revision}.${version.build}"/>
+    </target>
+        
+	<target name="init" depends="initVersion">
+		<mkdir dir="${gen.lib.dir}"/>
+	    <mkdir dir="${dist.dir}"/>
+		<mkdir dir="${build.dir}"/>
+
+		<taskdef resource="net/sf/antcontrib/antlib.xml" loaderref="ant-loader" classpathref="build.class.path" />
+        <taskdef resource="checkstyletask.properties" loaderref="ant-loader" classpathref="build.class.path" />
+	</target>
+	
+	<target name="PS_MS_cfg" depends="init" description="Build the Configuration jar file.">
+	    <property name="ps_ms_cfg.project.name" value="ps_ms_cfg"/>
+		<property name="ps_ms_cfg.jar.file" value="${gen.lib.dir}/${ps_ms_cfg.project.name}.jar"/>
+		<mocha:makejar dest.file.name="${ps_ms_cfg.jar.file}" section.name="${ps_ms_cfg.project.name}">
+			<jar.file.set>
+	            <fileset dir="${ps_ms_cfg.dir}/resources"/>
+			</jar.file.set>
+		</mocha:makejar>
+	</target>
+		
+    <target name="PS_MS_common" depends="PS_MS_cfg" description="Builds the PS_MS_common jar file.">
+    	<property name="ps_ms_common.project.name" value="ps_ms_common"/>
+        <property name="ps_ms_common.jar.file" value="${gen.lib.dir}/${ps_ms_common.project.name}.jar"/>
+        <mkdir dir="${build.dir}"/>
+        <antcall target="generate"/>
+    	<mocha:compile project.dir="${ps_ms_common.dir}" project.name="${ps_ms_common.project.name}">
+    		<src.dirs>
+    			<src path="${ps_ms_common.dir}/src"/>
+    			<src path="${gen.src.dir}"/>
+    		</src.dirs>
+    	</mocha:compile>
+        <mocha:makejar dest.file.name="${ps_ms_common.jar.file}" section.name="${ps_ms_common.project.name}">
+        	<jar.file.set>
+                <fileset dir="${build.dir}">
+                    <exclude name="classes/**"/>
+                </fileset>
+            </jar.file.set>
+        </mocha:makejar>
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="PS_MS_common_impl" depends="PS_MS_common" description="Builds the PS_MS_common_impl jar file.">
+    	<property name="ps_ms_common_impl.project.name" value="ps_ms_common_impl"/>
+        <property name="ps_ms_common_impl.jar.file" value="${gen.lib.dir}/${ps_ms_common_impl.project.name}.jar"/>
+    	<mkdir dir="${build.dir}"/>
+        <mocha:compile project.dir="${ps_ms_common_impl.dir}" project.name="${ps_ms_common_impl.project.name}">
+            <src.dirs>
+                <src path="${ps_ms_common_impl.dir}/src"/>
+            </src.dirs>
+        </mocha:compile>
+        <mocha:makejar dest.file.name="${ps_ms_common_impl.jar.file}" section.name="${ps_ms_common_impl.project.name}">
+        	<jar.file.set>
+                <fileset dir="${build.dir}">
+                    <exclude name="classes/**"/>
+                </fileset>
+            </jar.file.set>
+        </mocha:makejar>
+        <delete dir="${build.dir}"/>
+    </target>
+    
+	<target name="PS_MS_ejb" depends="PS_MS_common_impl" description="Builds the PS_MS_EJB jar file.">
+        <property name="ps_ms_ejb.project.name" value="ps_ms_ejb"/>
+        <property name="ps_ms_ejb.jar.file" value="${gen.lib.dir}/${ps_ms_ejb.project.name}.jar"/>
+        <mkdir dir="${build.dir}"/>
+        <mocha:compile project.dir="${ps_ms_ejb.dir}" project.name="${ps_ms_ejb.project.name}">
+            <src.dirs>
+                <src path="${ps_ms_ejb.dir}/src"/>
+            </src.dirs>
+        </mocha:compile>
+        <mocha:makejar dest.file.name="${ps_ms_ejb.jar.file}" section.name="${ps_ms_ejb.project.name}">
+            <jar.file.set>
+                <fileset dir="${build.dir}">
+                    <exclude name="classes/**"/>
+                </fileset>
+            	<fileset dir="${ps_ms_ejb.dir}/resources"/>
+            </jar.file.set>
+        </mocha:makejar>
+        <delete dir="${build.dir}"/>
+	</target>
+
+    <target name="PS_MS_web" depends="PS_MS_ejb" description="Builds the PS_MS_web war file.">
+        <property name="ps_ms_web.project.name" value="ps_ms_web"/>
+    	<property name="ps_ms_web.war.file" value="${gen.lib.dir}/${ps_ms_web.project.name}.war"/>
+        <mkdir dir="${build.dir}"/>
+        <mocha:compile project.dir="${ps_ms_web.dir}" project.name="${ps_ms_web.project.name}">
+            <src.dirs>
+                <src path="${ps_ms_web.dir}/src"/>
+            </src.dirs>
+        </mocha:compile>
+        <war destfile="${ps_ms_web.war.file}"
+           duplicate="preserve" webxml="${ps_ms_cfg.dir}/war/web.xml">
+            <manifest>
+                <attribute name="Built-By" value="${specification.vendor}" />
+                <attribute name="Weblogic-Application-Version" value="${version.number}" />
+                <section name="PS_MS_web">
+                    <attribute name="Specification-Title" value="${specification.title}" />
+                    <attribute name="Specification-Version" value="${specification.version}" />
+                    <attribute name="Specification-Vendor" value="${specification.vendor}" />
+                    <attribute name="Implementation-Title" value="${implementation.title}" />
+                    <attribute name="Implementation-Version" value="${version.number}" />
+                    <attribute name="Implementation-Vendor" value="${implementation.vendor}" />
+                </section>
+            </manifest>
+            <classes dir="${build.dir}">
+                <exclude name="classes/**"/>
+            </classes>
+        </war>
+        <checksum file="${ps_ms_web.war.file}"/>
+        <delete dir="${build.dir}"/>
+    </target>
+	
+	<target name="PS_MS_Server" depends="PS_MS_web, copyjars" description="Builds the MOCHA-Server ear file.">
+	    <property name="ps_ms_server.project.name" value="mocha-server"/>
+		<property name="ear.file.name" value="${gen.lib.dir}/${ps_ms_server.project.name}-${version.number}.ear"/>
+		<mkdir dir="${build.dir}/META-INF"/>
+		<copy todir="${build.dir}/META-INF">
+			<fileset dir="${ps_ms_cfg.dir}/ear">
+			    <exclude name="application.xml"/>
+			</fileset>
+		</copy>
+        <ear destfile="${ear.file.name}" 
+           duplicate="preserve" appxml="${ps_ms_cfg.dir}/ear/application.xml" >
+            <manifest>
+                <attribute name="Built-By" value="${specification.vendor}" />
+                <attribute name="Weblogic-Application-Version" value="${version.number}" />
+                <section name="${ps_ms_server.project.name}">
+                    <attribute name="Specification-Title" value="${specification.title}" />
+                    <attribute name="Specification-Version" value="${specification.version}" />
+                    <attribute name="Specification-Vendor" value="${specification.vendor}" />
+                    <attribute name="Implementation-Title" value="${implementation.title}" />
+                    <attribute name="Implementation-Version" value="${version.number}" />
+                    <attribute name="Implementation-Vendor" value="${implementation.vendor}" />
+                </section>
+            </manifest>
+            <fileset dir="${build.dir}"/>
+        </ear>
+        <checksum file="${ear.file.name}"/>
+		<delete dir="${build.dir}"/>
+	</target>
+	
+    <target name="copyjars" description="Copies the shared jar files for inclusion in the ear.">
+    	<mkdir dir="${build.lib.dir}"/>
+        <copy todir="${build.lib.dir}" includeemptydirs="false" flatten="true">
+            <fileset dir="${ps_ms_lib.dir}/lib"/>
+            <fileset dir="${gen.lib.dir}">
+                <include name="**/ps_ms_cfg.jar"/>
+            	<include name="**/ps_ms_common*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dir}">
+            <fileset dir="${gen.lib.dir}">
+                <exclude name="**/ps_ms_cfg.jar"/>
+                <exclude name="**/ps_ms_common*.jar"/>
+            </fileset>
+        </copy>
+    </target>
+
+	<target name="database" description="Copies the DDL to create the database to the dist directory.">
+        <!-- Create database zip file -->
+		<property name="ddl.zip.name" value="${gen.lib.dir}/mocha-server-db-${version.number}.zip"/>
+        <zip destfile="${ddl.zip.name}" basedir="${ps_ms_db.dir}"/>
+        <checksum file="${ddl.zip.name}" />
+	</target>
+		
+	<target name="jarfiles" description="Copies the external jar files need by MOCHA Server for inclusion in the zip file.">
+		<property name="jar.zip.name" value="${gen.lib.dir}/mocha-server-jars-${version.number}.zip"/>
+		<zip destfile="${jar.zip.name}">
+			<fileset dir="${ps_ms_lib.dir}/runtime"/>
+		</zip>
+		<checksum file="${jar.zip.name}"/>
+	</target>
+		
+	<target name="package" depends="PS_MS_Server, database, jarfiles" description="Packages the MOCHA-Server artifacts in to a zip file.">
+        <property name="zip.dest.file" value="${dist.dir}/mocha-server-pkg-${version.number}.zip"/>
+		<zip destfile="${zip.dest.file}"> 
+            <fileset dir="${gen.lib.dir}">
+                <include name="mocha-server*" />
+            </fileset>
+        </zip>
+        <checksum file="${zip.dest.file}"/>
+	</target>
+	
+	<macrodef name="compile" description="Compiles a set of source code." uri="http://www.domain/pharmacy/mocha">
+		<attribute name="project.dir" description="The project directory to execute Checkstyle against."/>
+		<attribute name="project.name" description="The name of the project being checked.  Checkstyle reports go in to this specific directory."/>
+		<element name="src.dirs" description="The fileset containing the source directories."/>
+		<sequential>
+			<mocha:checkstyle project.dir="@{project.dir}" project.name="@{project.name}"/>
+            <javac
+                destdir="${build.dir}"
+                debug="${compiler.debug}"
+                debuglevel="${compiler.debuglevel}"
+                compiler="${build.compiler}"
+                source="${compiler.source}"
+                target="${compiler.target}"
+                deprecation="${compiler.deprecation}"
+            	includeantruntime="false">
+                    <classpath refid="build.class.path" />
+                    <compilerarg value="${compiler.args}"/>
+            	   <src.dirs/>
+            </javac>
+		</sequential>
+	</macrodef>
+	
+	<macrodef name="makejar" description="Creates a jar file and MD5 checksum from the supplied attributes." uri="http://www.domain/pharmacy/mocha">
+		<attribute name="dest.file.name" description="The directory and name of the jar file to create."/>
+		<attribute name="section.name" description="The name of the section in the manifest file."/>
+		<element name="jar.file.set" description="The fileset of files to include in the jar."/>
+		<sequential>
+	        <jar destfile="@{dest.file.name}">
+	            <jar.file.set/>
+	            <manifest>
+	                <attribute name="Built-By" value="${specification.vendor}" />
+	                <attribute name="Weblogic-Application-Version" value="${version.number}" />
+	                <section name="@{section.name}">
+	                    <attribute name="Specification-Title" value="${specification.title}" />
+	                    <attribute name="Specification-Version" value="${specification.version}" />
+	                    <attribute name="Specification-Vendor" value="${specification.vendor}" />
+	                    <attribute name="Implementation-Title" value="${implementation.title}" />
+	                    <attribute name="Implementation-Version" value="${version.number}" />
+	                    <attribute name="Implementation-Vendor" value="${implementation.vendor}" />
+	                </section>
+	            </manifest>
+	        </jar>
+	        <checksum file="@{dest.file.name}"/>
+		</sequential>
+	</macrodef>
+
+	<macrodef name="checkstyle" uri="http://www.domain/pharmacy/mocha">
+        <attribute name="html" default="true" />
+		<attribute name="project.dir" description="The project directory to scan for Java source code."/>
+		<attribute name="project.name" description="The name of the project being checked."/>
+        <sequential>
+        	<mkdir dir="${report.dir}/checkstyle"/>
+            <checkstyle config="${ps_ms_cfg.dir}/checkstyle/VACheckstyle.xml"
+                        failOnViolation="false"
+                        failureProperty="checkstyle.failure"
+                        classpathref="build.class.path">
+                <fileset dir="@{project.dir}">
+                    <include name="src/**/*.java" />
+                </fileset>
+                <formatter type="xml" tofile="${report.dir}/checkstyle/@{project.name}.xml" />
+            </checkstyle>
+
+            <if>
+                <istrue value="@{html}" />
+                <then>
+                    <xslt basedir="${report.dir}/checkstyle"
+                          destdir="${report.dir}/checkstyle"
+                          style="${ps_ms_cfg.dir}/checkstyle/checkstyle-noframes-severity-sorted.xsl"
+                          scanincludeddirectories="false" />
+                </then>
+            </if>
+			<if>
+				<isset property="checkstyle.failure"/>
+				<then>
+			        <fail message="Source code in the project @{project.name} does not conform to VA Java Coding Standards."/>
+				</then>
+			</if>
+        </sequential>
+    </macrodef>
+</project>

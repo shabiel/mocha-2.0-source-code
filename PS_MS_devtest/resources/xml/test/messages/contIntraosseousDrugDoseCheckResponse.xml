@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PEPSResponse
+    xsi:schemaLocation="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/drug/check/response drugCheckSchemaOutput.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="gov/va/med/pharmacy/peps/external/common/preencapsulation/vo/drug/check/response">
+    <Header>
+        <Time value="0845"/>
+        <MServer namespace="VISTA" uci="text" ip="127.000.0.1"
+            serverName="Server Name" stationNumber="45"/>
+        <MUser userName="user" duz="88660079" jobNumber="365"/>
+        <PEPSVersion customIssueDate="NOT AVAILABLE"
+            customBuildVersion="NOT AVAILABLE"
+            customDbVersion="NOT AVAILABLE" difIssueDate="20130222"
+            difBuildVersion="4" difDbVersion="3.3"/>
+    </Header>
+    <Body>
+        <drugCheck>
+            <drugDoseChecks>
+                <drugDoseCheck>
+                    <source>FDB</source>
+                    <message>
+                        <drug orderNumber="B777" ien="1812"
+                            drugName="Drug Name AAA" vuid="3333" gcnSeqNo="3404"/>
+                        <severity>Information</severity>
+                        <type>HepaticImpairment</type>
+                        <drugName>Drug Name AAA</drugName>
+                        <text>Hepatic function is important in this drug's metabolism. Dosing adjustment should be considered in patients with significant hepatic impairment.</text>
+                    </message>
+                    <drug orderNumber="B777" ien="1812"
+                        drugName="Drug Name AAA" vuid="3333" gcnSeqNo="3404"/>
+                    <chemoInjectable>false</chemoInjectable>
+                    <singleDoseStatus>Passed</singleDoseStatus>
+                    <singleDoseStatusCode>1</singleDoseStatusCode>
+                    <singleDoseMessage></singleDoseMessage>
+                    <singleDoseMax>50 microgram per kilogram per minute</singleDoseMax>
+                    <single>
+                        <databaseValue>5760</databaseValue>
+                        <doseValue>400</doseValue>
+                        <percentError>-93</percentError>
+                        <unitOfMeasure>milligram per day</unitOfMeasure>
+                    </single>
+                    <rangeDoseStatus>BelowRecommended</rangeDoseStatus>
+                    <rangeDoseStatusCode>4</rangeDoseStatusCode>
+                    <rangeDoseMessage>Total dose amount of 1,600 milligram per day is below the dosing range of 2,396.16 milligram per day to 5,990.4 milligram per day.</rangeDoseMessage>
+                    <rangeDoseLow>20 microgram per kilogram per minute</rangeDoseLow>
+                    <rangeLow>
+                        <databaseValue>2396.16</databaseValue>
+                        <doseValue>1600</doseValue>
+                        <percentError>-33</percentError>
+                        <unitOfMeasure>milligram per day</unitOfMeasure>
+                    </rangeLow>
+                    <rangeDoseHigh>50 microgram per kilogram per minute</rangeDoseHigh>
+                    <rangeHigh>
+                        <databaseValue>5990.4</databaseValue>
+                        <doseValue>1600</doseValue>
+                        <percentError>-73</percentError>
+                        <unitOfMeasure>milligram per day</unitOfMeasure>
+                    </rangeHigh>
+                    <doseHigh>50</doseHigh>
+                    <doseHighUnit>microgram per kilogram per minute</doseHighUnit>
+                    <doseLow>20</doseLow>
+                    <doseLowUnit>microgram per kilogram per minute</doseLowUnit>
+                    <doseFormHigh>0.005</doseFormHigh>
+                    <doseFormHighUnit>milliliter per kilogram per minute</doseFormHighUnit>
+                    <doseFormLow>0.002</doseFormLow>
+                    <doseFormLowUnit>milliliter per kilogram per minute</doseFormLowUnit>
+                    <doseRouteDescription>CONT INTRAOSSEOUS</doseRouteDescription>
+                    <durationStatus>Passed</durationStatus>
+                    <durationStatusCode>1</durationStatusCode>
+                    <durationMessage></durationMessage>
+                    <frequencyStatus>ExceedsRecommended</frequencyStatus>
+                    <frequencyStatusCode>3</frequencyStatusCode>
+                    <frequencyMessage>Frequency of 4 administrations per day exceeds the frequency of 1 administrations per day.</frequencyMessage>
+                    <frequencyHigh>1.0</frequencyHigh>
+                    <frequencyLow>1.0</frequencyLow>
+                    <dailyDoseStatus>BelowRecommended</dailyDoseStatus>
+                    <dailyDoseStatusCode>4</dailyDoseStatusCode>
+                    <dailyDoseMessage>Total dose amount of 1,600 milligram per day is below the dosing range of 2,396.16 milligram per day to 5,990.4 milligram per day.</dailyDoseMessage>
+                    <daily>
+                        <databaseValue>2396.16</databaseValue>
+                        <doseValue>1600</doseValue>
+                        <percentError>-33</percentError>
+                        <unitOfMeasure>milligram per day</unitOfMeasure>
+                    </daily>
+                    <maxDailyDoseStatus>Passed</maxDailyDoseStatus>
+                    <maxDailyDoseStatusCode>1</maxDailyDoseStatusCode>
+                    <maxDailyDoseMessage></maxDailyDoseMessage>
+                    <maxDaily>
+                        <databaseValue>5990.4</databaseValue>
+                        <doseValue>400</doseValue>
+                        <percentError>-93</percentError>
+                        <unitOfMeasure>milligram per day</unitOfMeasure>
+                    </maxDaily>
+                    <maxLifetimeDose>0</maxLifetimeDose>
+                    <maxLifetime>
+                        <databaseValue>0</databaseValue>
+                        <doseValue>0</doseValue>
+                        <percentError>0</percentError>
+                        <unitOfMeasure></unitOfMeasure>
+                    </maxLifetime>
+                    <maxSingleNTEDose>4</maxSingleNTEDose>
+                    <maxSingleNTEDoseUnit>milligram per minute</maxSingleNTEDoseUnit>
+                    <maxSingleNTEDoseForm>0.4</maxSingleNTEDoseForm>
+                    <maxSingleNTEDoseFormUnit>milliliter per minute</maxSingleNTEDoseFormUnit>
+                    <maxLifetimeOrderMessage></maxLifetimeOrderMessage>
+                    <maxLifetimeOrderStatus>Passed</maxLifetimeOrderStatus>
+                    <maxLifetimeOrderStatusCode>1</maxLifetimeOrderStatusCode>
+                    <maxLifetimeOrder>
+                        <databaseValue>0</databaseValue>
+                        <doseValue>0</doseValue>
+                        <percentError>0</percentError>
+                        <unitOfMeasure></unitOfMeasure>
+                    </maxLifetimeOrder>
+                </drugDoseCheck>
+            </drugDoseChecks>
+        </drugCheck>
+    </Body>
+</PEPSResponse>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!-- DrugDataVendor Capabilities -->
+    <bean
+        id="drugInfoCapability"
+        class="gov.va.med.pharmacy.peps.external.common.drugdatavendor.capability.impl.DrugInfoCapabilityImpl">
+        <property
+            name="fdbDataManager"
+            ref="fdbDataManager" />
+    </bean>
+
+    <bean
+        id="performDrugChecksCapability"
+        class="gov.va.med.pharmacy.peps.external.common.drugdatavendor.capability.impl.PerformDrugChecksCapabilityImpl">
+        <property
+            name="fdbDataManager"
+            ref="fdbDataManager" />
+        <property
+            name="performDrugDoseCheckCapability"
+            ref="performDrugDoseCheckCapability" />
+        <property
+            name="performDrugDrugCheckCapability"
+            ref="performDrugDrugCheckCapability" />
+        <property
+            name="performDrugTherapyCheckCapability"
+            ref="performDrugTherapyCheckCapability" />
+    </bean>
+
+    <bean
+        id="performDrugDoseCheckCapability"
+        class="gov.va.med.pharmacy.peps.external.common.drugdatavendor.capability.impl.PerformDrugDoseCheckCapabilityImpl">
+        <property
+            name="screening"
+            ref="fdbScreening" />
+        <property
+            name="fdbDataManager"
+            ref="fdbDataManager" />
+    </bean>
+
+    <bean
+        id="performDrugDrugCheckCapability"
+        class="gov.va.med.pharmacy.peps.external.common.drugdatavendor.capability.impl.PerformDrugDrugCheckCapabilityImpl">
+        <property
+            name="fdbDataManager"
+            ref="fdbDataManager" />
+        <property
+            name="screening"
+            ref="fdbScreening" />
+    </bean>
+
+    <bean
+        id="performDrugTherapyCheckCapability"
+        class="gov.va.med.pharmacy.peps.external.common.drugdatavendor.capability.impl.PerformDrugTherapyCheckCapabilityImpl">
+        <property
+            name="screening"
+            ref="fdbScreening" />
+    </bean>
+
+    <bean
+        id="versionCapability"
+        class="gov.va.med.pharmacy.peps.external.common.drugdatavendor.capability.impl.VersionCapabilityImpl">
+        <property
+            name="navigation"
+            ref="fdbNavigation" />
+        <property
+            name="dataSource"
+            ref="fdbDataSource" />
+    </bean>
+
+    <bean
+        id="randomOrderCheckCapability"
+        class="gov.va.med.pharmacy.peps.external.common.preencapsulation.capability.impl.RandomOrderCheckCapabilityImpl">
+        <property
+            name="dataSource"
+            ref="fdbDataSource" />
+    </bean>
+
+    <!-- Inbound PreEncapsulation Beans -->
+    <bean
+        id="orderCheckService"
+        class="gov.va.med.pharmacy.peps.external.common.preencapsulation.session.impl.OrderCheckServiceImpl">
+        <property
+            name="processOrderChecksCapability"
+            ref="processOrderChecksCapability" />
+            
+        <property
+            name="jndiTemplate"
+            ref="jndiTemplate" />
+    </bean>
+
+    <bean
+        id="drugInfoService"
+        class="gov.va.med.pharmacy.peps.external.common.preencapsulation.session.impl.DrugInfoServiceImpl">
+        <property
+            name="processDrugInfoCapability"
+            ref="processDrugInfoCapability" />
+    </bean>
+
+    <!-- Inbound PreEncapsulation Capabilities -->
+    <bean
+        id="processOrderChecksCapability"
+        class="gov.va.med.pharmacy.peps.external.common.preencapsulation.capability.impl.ProcessOrderChecksCapabilityImpl">
+        <property
+            name="performDrugChecksCapability"
+            ref="performDrugChecksCapability" />
+        <property
+            name="versionCapability"
+            ref="versionCapability" />
+    </bean>
+
+    <bean
+        id="processDrugInfoCapability"
+        class="gov.va.med.pharmacy.peps.external.common.preencapsulation.capability.impl.ProcessDrugInfoCapabilityImpl">
+        <property
+            name="drugInfoCapability"
+            ref="drugInfoCapability" />
+    </bean>
+
+    <bean
+        id="dosingInfoCapability"
+        class="gov.va.med.pharmacy.peps.external.common.drugdatavendor.capability.impl.DosingInfoCapabilityImpl">
+        <property
+            name="fdbDataManager"
+            ref="fdbDataManager" />
+    </bean>
+
+	<bean id="processDosingInfoCapability"
+		class="
+		gov.va.med.pharmacy.peps.external.common.preencapsulation.capability.impl.ProcessDosingInfoCapabilityImpl">
+		<property name="dosingInfoCapability" ref="dosingInfoCapability"/>
+	</bean>
+	
+	<bean id="dosingInfoService"
+		class="gov.va.med.pharmacy.peps.external.common.preencapsulation.session.impl.DosingInfoServiceImpl">
+		<property name="processDosingInfoCapability" ref="processDosingInfoCapability"/>
+	</bean>
+	
+    <!-- First DataBank -->
+    <!--  FDB classes are managed by Spring to reduce the frequency of class instantiation (Spring caches instances for -->
+    <!--  us) and to support profiling FDB methods if we chose to. -->
+    <bean
+        id="fdbCode"
+        class="firstdatabank.dif.FDBCode"
+        scope="prototype">
+        <constructor-arg
+            ref="fdbDataManager" />
+    </bean>
+
+    <bean
+        id="fdbDataManager"
+        class="firstdatabank.database.FDBDataManager"
+        factory-method="getInstanceUsingFactory">
+        <constructor-arg
+            ref="fdbJdbcConnectionFactory" />
+    </bean>
+
+    <bean
+        id="fdbJdbcConnectionFactory"
+        class="gov.va.med.pharmacy.peps.external.common.drugdatavendor.utility.JdbcConnectionFactory">
+        <property
+            name="dataSource"
+            ref="fdbDataSource" />
+    </bean>
+
+    <bean
+        id="fdbNavigation"
+        class="firstdatabank.dif.Navigation">
+        <constructor-arg
+            ref="fdbDataManager" />
+    </bean>
+
+    <bean
+        id="fdbScreening"
+        class="firstdatabank.dif.Screening">
+        <constructor-arg
+            ref="fdbDataManager" />
+    </bean>
+
+</beans>
